@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Signup() {
+const Signup = () => {
   const REGISTER_URL = 'http://fitnesstrac-kr.herokuapp.com/api/users/register';
 
   const [username, setUsername] = useState('');
