@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const Signup = () => {
-  const REGISTER_URL = 'http://fitnesstrac-kr.herokuapp.com/api/users/register';
-
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [token, setToken] = useState('');
@@ -11,7 +9,7 @@ const Signup = () => {
     const token = localStorage.getItem('token');
     if (token) {
       setToken(token);
-    }
+    };
     setUsername('');
     setPassword('');
   }, []);
@@ -19,20 +17,22 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(REGISTER_URL, {
+      const response = await fetch('http://fitnesstrac-kr.herokuapp.com/api/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            username,
-            password
+            username: username,
+            password: password,
         }),
       });
 
-      const { user } = await response.json();
+      const user = await response.json();
+      console.log(user)
       setToken(user.token);
       localStorage.setItem('token', user.token);
+      localStorage.setItem('key', username);
     } catch (error) {
       console.error(error);
     }
@@ -41,7 +41,7 @@ const Signup = () => {
   if (!token) {
     return (
       <div>
-        <h2 className=''>Register to become a member of our fit community!</h2>
+        <h2 className=''>Not yet a member? Register here!</h2>
         <form onSubmit={handleSubmit} className=''>
           <fieldset className=''>
             <legend>Register</legend>
@@ -65,7 +65,12 @@ const Signup = () => {
       </div>
     );
   } else if (token) {
-    return <h2>You have successfully joined!</h2>;
+    return (
+      <div>
+      <h1>Hello </h1>
+      <h2>You have successfully joined!</h2>
+      </div>
+      )
   }
 }
 

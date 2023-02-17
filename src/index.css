@@ -47,7 +47,9 @@ nav li {
   margin: 0 10px;
 }
 
-.home-page {
+.home-page,
+.routines-page,
+.activities-page {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -55,7 +57,9 @@ nav li {
     font-size: 20px;
 }
 
-.home-page h2 {
+.home-page h2,
+.routines-page h2,
+.activities-page h2 {
     margin: 0;
     padding: 0;
 }
@@ -73,3 +77,16 @@ nav li {
     list-style: none;
     padding: 0;
 }
+
+.public-routines-list,
+.public-activities-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* .routine,
+.activity {
+  
+} */
