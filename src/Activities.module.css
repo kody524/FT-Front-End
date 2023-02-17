@@ -1,0 +1,45 @@
+body{
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+.container{
+    
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 0 16px 16px 16px;
+    margin-left: 30px;
+    width: 400px;
+    height: 200px;
+    overflow: auto;
+}
+.container::-webkit-scrollbar {
+border-radius: 1%;
+}
+
+.container::-webkit-scrollbar-track-piece {
+background: rgb(53, 52, 52);
+border-radius: 1%;
+}
+::-webkit-scrollbar-thumb {
+background-color: #d6dee1;
+border-radius: 1%;
+}
+.title{
+display: flex;
+justify-content: center;
+flex-direction: row;
+align-items: center;
+text-decoration: underline;
+padding-bottom: 30px;
+    font-size: medium;
+    color: black;
+
+}
