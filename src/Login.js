@@ -38,7 +38,7 @@ function Login({
             setPassword(e.target.value);
           }}
         />
-        <button
+       {loggedIn?<Link to="/home"><button
           onClick={() => {
             login(username, password, setLoggedIn);
             setUsername("");
@@ -47,7 +47,16 @@ function Login({
           className={styles.btn}
         >
           Submit
-        </button>
+        </button></Link>:<button
+          onClick={() => {
+            login(username, password, setLoggedIn);
+            setUsername("");
+            setPassword("");
+          }}
+          className={styles.btn}
+        >
+          Submit
+        </button>} 
         <Link
           to="/register"
           className={styles.link}
