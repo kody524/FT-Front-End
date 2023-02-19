@@ -7,6 +7,15 @@ body.active-modal {
   display: block;
   margin: 100px auto 0;
   font-size: 18px;
+  color: black;
+  background-color: transparent;
+   margin-top: 100px;
+   margin-bottom: 20px;
+   height: 30px;
+   width: 75px;
+   border-radius: 5px;
+   border-color: lightcyan;
+   cursor: pointer;
 }
 
 .modal,
@@ -51,4 +60,13 @@ body.active-modal {
   margin-top: 10px;
   height: 30px;
   width: 70px;
+  color: black;
+  background-color: transparent;
+   margin-top: 100px;
+   margin-bottom: 20px;
+   height: 30px;
+   width: 75px;
+   border-radius: 5px;
+   border-color: lightcyan;
+   cursor: pointer;
 }

@@ -17,7 +17,6 @@ body {
   height: 500px;
   width: 500px;
   height: 500px;
-  width: 500px;
   background: linear-gradient(0.25turn, #3f87a6);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
@@ -35,7 +34,7 @@ body {
 
 .btn {
   color: black;
-  background-color: lightcyan;
+ background-color: transparent;
   margin-top: 100px;
   margin-bottom: 20px;
   height: 30px;

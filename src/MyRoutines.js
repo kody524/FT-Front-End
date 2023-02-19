@@ -79,6 +79,7 @@ export function MyRoutines({
   return (
     <>
       <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
+      <h1>My Routines</h1>
       <button onClick={toggleModalCreate} className={styles.create}>
         Create Routine
       </button>
@@ -217,6 +218,7 @@ export function MyRoutines({
                 DeleteRoutine
               </button>
               <button
+              className={styles.attatch}
                 onClick={() => {
                   setAttatch(!attach);
                   setRoutineId(ele.id);
@@ -268,7 +270,8 @@ export function MyRoutines({
                       placeholder="Duration"
                       type="number"
                     ></input>
-                    <button
+                    <button 
+                    className={styles.submit}
                       onClick={() => {
                         addActivityToRoutine(
                           routineId,

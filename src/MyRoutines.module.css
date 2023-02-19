@@ -58,14 +58,42 @@ body {
   margin-top: 10px;
   height: 30px;
   width: 70px;
+  color: black;
+  background-color: transparent;
+   margin-top: 100px;
+   margin-bottom: 20px;
+   height: 30px;
+   width: 75px;
+   border-radius: 5px;
+   border-color: lightcyan;
+   cursor: pointer;
 }
 .create {
   display: flex;
   margin-left: 675px;
+  margin-right: 10px;
+  color: black;
+  margin-top: 10px;
+  background-color: transparent;
+   margin-bottom: 20px;
+   height: 35px;
+   width: 100px;
+   border-radius: 5px;
+   border-color: lightcyan;
+   cursor: pointer;
 }
 .editdelete {
   margin-top: 20px;
   margin-right: 10px;
+  color: black;
+  background-color: transparent;
+   margin-top: 100px;
+   margin-bottom: 20px;
+   height: 30px;
+   width: 100px;
+   border-radius: 5px;
+   border-color: lightcyan;
+   cursor: pointer;
 }
 .inputs {
   margin-top: 5px;
@@ -77,4 +105,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.attatch{
+  margin-top: 20px;
+  margin-right: 10px;
+  color: black;
+  background-color: transparent;
+   margin-top: 100px;
+   margin-bottom: 20px;
+   height: 30px;
+   width: 100px;
+   border-radius: 5px;
+   border-color: lightcyan;
+   cursor: pointer;
 }

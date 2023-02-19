@@ -35,14 +35,14 @@ body {
 
 .btn {
   color: black;
-  background-color: lightcyan;
-  margin-top: 100px;
-  margin-bottom: 20px;
-  height: 30px;
-  width: 75px;
-  border-radius: 5px;
-  border-color: lightcyan;
-  cursor: pointer;
+  background-color: transparent;
+   margin-top: 100px;
+   margin-bottom: 20px;
+   height: 30px;
+   width: 75px;
+   border-radius: 5px;
+   border-color: lightcyan;
+   cursor: pointer;
 }
 .btn:hover {
   background-color: aliceblue;
