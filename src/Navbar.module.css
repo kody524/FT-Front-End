@@ -9,18 +9,28 @@
 .nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding-top: 17px;
+}
+.logo {
+  color: black;
+  font-size: larger;
+  margin-right: 5px;
 }
 .link {
   color: black;
- font-size: larger  ;
+  font-size: larger;
+  margin-right: 5px;
 }
 .link:hover {
   color: white;
 }
-.user{
+.user {
   margin-top: 2px;
-    margin-right: -150px;
-   
+  margin-right: -210px;
+}
+.myroutine {
+  color: black;
+  font-size: larger;
+  margin-left: 65px;
 }

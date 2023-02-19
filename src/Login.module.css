@@ -1,7 +1,7 @@
-body{
+body {
   background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
-.main{
+.main {
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,7 +9,7 @@ body{
   justify-content: center;
   height: 700px;
 }
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,29 +22,28 @@ body{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
 }
-.title{
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: xx-large;
   margin-bottom: 100px;
 }
-.input1{
-  padding:10px;
+.input1 {
+  padding: 10px;
 }
 
-.btn{
+.btn {
   color: black;
- background-color: lightcyan;
-margin-top: 100px;
-margin-bottom: 20px;
-height: 30px;
-width: 75px;
-border-radius: 5px;
-border-color:lightcyan ;
-cursor: pointer;
+  background-color: lightcyan;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  height: 30px;
+  width: 75px;
+  border-radius: 5px;
+  border-color: lightcyan;
+  cursor: pointer;
 }
-.btn:hover{
+.btn:hover {
   background-color: aliceblue;
 }
-

@@ -1,5 +1,5 @@
 import styles from "./Register.module.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { register } from "./allAPICalls";
 import { TextField } from "@mui/material";
 export function Register({
@@ -16,7 +16,7 @@ export function Register({
         <TextField
           value={username}
           required
-          id="outlined-required"
+          id="outlined-required1"
           label="Username"
           className={styles.input1}
           onChange={(e) => {
@@ -27,6 +27,7 @@ export function Register({
           value={password}
           className={styles.input2}
           required
+          type="password"
           id="outlined-required"
           label="Password"
           onChange={(e) => {

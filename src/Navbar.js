@@ -1,11 +1,9 @@
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
-function Navbar({setLoggedIn,loggedIn}) {
+function Navbar({ setLoggedIn, loggedIn }) {
   const user = localStorage.getItem("user");
-  return (
-
-    
+  return  (
     <div className={styles.navbar}>
       <nav className={styles.nav}>
         <ul>
@@ -25,53 +23,46 @@ function Navbar({setLoggedIn,loggedIn}) {
           >
             Routines
           </Link>
+        </ul>
           
-        </ul>
-        {user? <><Link
-            className={styles.link}
-            style={{ textDecoration: "none" }}
-            to="/myroutines"
-          >
-            My Routines
-          </Link>
-       <ul>
-          <Link
-            className={styles.link}
-            style={{ textDecoration: "none" }}
-            to="/activities"
-          >
-            Activities
-          </Link>
-        </ul>
+            <Link
+              className={styles.myroutine}
+              style={{ textDecoration: "none" }}
+              to="/myroutines"
+            >
+              My Routines
+            </Link>
+            <ul>
+              <Link
+                className={styles.link}
+                style={{ textDecoration: "none" }}
+                to="/activities"
+              >
+                Activities
+              </Link>
+            </ul>
+       
+        
+       
    
-      </>:null}
-       {user?<><span className={styles.user}>User:{user}</span> <ul>
-         
-          <Link
-            className={styles.link}
-            style={{ textDecoration: "none" }}
-            to="/"
-            onClick={()=>{
-                setLoggedIn(false)
-                localStorage.clear()
-            }}
-          >
-            Logout
-          </Link>
-        </ul></>:    <Link
-            className={styles.link}
-            style={{ textDecoration: "none" }}
-            to="/"
-            onClick={()=>{
-                setLoggedIn(false)
-                localStorage.clear()
-            }}
-          >
-            Logout
-          </Link>}
+            <span className={styles.user}>User:{user}</span>{" "}
+            <ul>
+              <Link
+                className={styles.link}
+                style={{ textDecoration: "none" }}
+                to="/"
+                onClick={() => {
+                  setLoggedIn(false);
+                  localStorage.clear();
+                }}
+              >
+                Logout
+              </Link>
+            </ul>
+  
       </nav>
     </div>
-  );
-}
+  
+              )}
 
 export default Navbar;

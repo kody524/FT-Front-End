@@ -2,13 +2,13 @@ import Navbar from "./Navbar";
 import styles from "./Routine.module.css";
 import React, { useState, useEffect } from "react";
 import { SpecificUser } from "./SpecificUser";
-import { getRoutines} from "./allAPICalls";
+import { getRoutines } from "./allAPICalls";
 import { Link } from "react-router-dom";
-export function Routine({user,setUser}) {
-  const [routines, setRoutines] = useState([]);
-const [specificUser,setSpecificUser]=useState(false)
 
-console.log(specificUser)
+export function Routine({ user, setUser }) {
+  const [routines, setRoutines] = useState([]);
+  const [specificUser, setSpecificUser] = useState(false);
+
   useEffect(() => {
     getRoutines(setRoutines);
   }, []);
@@ -16,7 +16,10 @@ console.log(specificUser)
   return (
     <>
       <Navbar />
-      {specificUser?<SpecificUser setSpecificUser={setSpecificUser}/>:
+      <h1>Routines</h1>
+      {specificUser ? (
+        <SpecificUser setSpecificUser={setSpecificUser} />
+      ) : (
         routines.map((ele, Index) => {
           return (
             <div className={styles.container} key={ele.id}>
@@ -24,11 +27,18 @@ console.log(specificUser)
                 <h1>{ele.name}</h1>
               </div>
               <div className={styles.details}>
-                <Link to="/specificUser" onClick={(e)=>{
-                 setSpecificUser(true)
-                  const user = e.target.innerText.slice(5)
-                  setUser(user)
-                }} className={styles.creator} style={{ textDecoration: "none" }}>User:{ele.creatorName}</Link>
+                <Link
+                  to="/specificUser"
+                  onClick={(e) => {
+                    setSpecificUser(true);
+                    const user = e.target.innerText.slice(5);
+                    setUser(user);
+                  }}
+                  className={styles.creator}
+                  style={{ textDecoration: "none" }}
+                >
+                  User:{ele.creatorName}
+                </Link>
                 <br></br>
                 <h2>Goal:{ele.goal}</h2>
                 <br></br>
@@ -36,8 +46,6 @@ console.log(specificUser)
                 {ele.activities.length < 1 ? <h2>No Activities</h2> : null}
                 <div>
                   {ele.activities.map((a, ind) => {
-                   
-  
                     return (
                       <div key={a.id}>
                         <h2>
@@ -54,11 +62,8 @@ console.log(specificUser)
               </div>
             </div>
           );
-        })}
-      
-      
-</>
-    
-      )
+        })
+      )}
+    </>
+  );
 }
-
