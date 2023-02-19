@@ -20,6 +20,9 @@ const Navibar = () => {
           <li>
             <a href='/signup'>SIGNUP</a>
           </li>
+          <li>
+            <a href='/login'>LOGIN</a>
+          </li>
         </ul>
       </nav>
     </div>

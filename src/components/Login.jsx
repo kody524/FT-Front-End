@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Signup = () => {
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [token, setToken] = useState('');
@@ -18,7 +18,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        'http://fitnesstrac-kr.herokuapp.com/api/users/register',
+        'http://fitnesstrac-kr.herokuapp.com/api/users/login',
         {
           method: 'POST',
           headers: {
@@ -36,17 +36,16 @@ const Signup = () => {
       setToken(user.token);
       localStorage.setItem('token', user.token);
     } catch (error) {
-      console.error(error);
+      console.log('ERROR: unable to login');
     }
   };
-
   if (!token) {
     return (
-      <div className='register-page'>
-        <h2>Not yet a member? Register here!</h2>
-        <form onSubmit={handleSubmit} className='register-form'>
-          <fieldset className='register-fieldset'>
-            <legend>Register</legend>
+      <div className='login-page'>
+        <h2>Welcome back!</h2>
+        <form onSubmit={handleSubmit} className='login-form'>
+          <fieldset className='login-fieldset'>
+            <legend>Login</legend>
             <input
               required='required'
               value={username}
@@ -63,19 +62,14 @@ const Signup = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             &nbsp;
-            <button type='submit'>Sign Up</button>
+            <button type='submit'>Log In</button>
           </fieldset>
         </form>
       </div>
     );
   } else if (token) {
-    return (
-      <div>
-        <h1>Hello </h1>
-        <h2>You have successfully joined!</h2>
-      </div>
-    );
+    return <h2>You're in, enjoy!</h2>;
   }
 };
 
-export default Signup;
+export default Login;

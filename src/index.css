@@ -14,6 +14,7 @@ nav {
   background-color:navy;
   color: white;
   height: 60px;
+  justify-content: space-between;
 }
 
 .title{
@@ -49,7 +50,9 @@ nav li {
 
 .home-page,
 .routines-page,
-.activities-page {
+.activities-page,
+.register-page,
+.login-page {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -86,7 +89,36 @@ nav li {
   
 }
 
-/* .routine,
-.activity {
-  
-} */
+.register-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+}
+
+.register-fieldset,
+.login-fieldset,
+.addpost-fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-fieldset input,
+.login-fieldset input {
+  font-size: large;
+}
+
+.register-fieldset button,
+.login-fieldset button {
+  font-size: large;
+  background-color: navy;
+  color: white;
+  border: 3px solid navy;
+  border-radius: 4px;
+}
+
+.register-fieldset button:hover,
+.login-fieldset button:hover {
+  color: salmon;
+}

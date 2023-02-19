@@ -4,6 +4,7 @@ import Home from './components/Home.jsx';
 import Signup from './components/Signup.jsx';
 import Routines from './components/Routines.jsx';
 import Activities from './components/Activities.jsx'
+import Login from './components/Login.jsx';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path='routines' element={<Routines />} />
         <Route path='activities' element={<Activities />} />
         <Route path='signup' element={<Signup />} />
-        
+        <Route path='login' element={<Login />} />
       </Routes>
     </div>
   );
