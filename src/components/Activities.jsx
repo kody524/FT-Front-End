@@ -26,9 +26,6 @@ const Activities = () => {
               <p>
                 {activity.name}
               </p>
-              <p>
-                {activity.description}
-              </p>
             </li>
           )
         })}

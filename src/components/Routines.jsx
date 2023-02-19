@@ -39,6 +39,15 @@ const Routines = () => {
                       <p>
                         {activities.name}
                       </p>
+                      <p>
+                        {activities.description}
+                      </p>
+                      <p>
+                        {activities.duration}
+                      </p>
+                      <p>
+                        {activities.count}
+                      </p>
                     </li>
                   )
                 })}

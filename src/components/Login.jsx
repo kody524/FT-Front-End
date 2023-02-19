@@ -36,7 +36,7 @@ const Login = () => {
       setToken(user.token);
       localStorage.setItem('token', user.token);
     } catch (error) {
-      console.log('ERROR: unable to login');
+      console.error(error);
     }
   };
   if (!token) {

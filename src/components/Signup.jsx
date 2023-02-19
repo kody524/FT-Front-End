@@ -71,8 +71,8 @@ const Signup = () => {
   } else if (token) {
     return (
       <div>
-        <h1>Hello </h1>
-        <h2>You have successfully joined!</h2>
+        <h1>Hello</h1>
+        <h2>You have successfully joined.</h2>
       </div>
     );
   }
