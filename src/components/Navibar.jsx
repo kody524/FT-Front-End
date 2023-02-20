@@ -27,7 +27,7 @@ const Navibar = () => {
             <a href='/activities'>Activities</a>
           </li>
           <li>
-            <a href='/users/me'>My Routines</a>
+            <a href='/myroutines'>My Routines</a>
           </li>
           <li>
             <a href='/addroutine'>Add Routine</a>

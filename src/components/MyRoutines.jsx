@@ -6,33 +6,32 @@ const MyRoutines = (props) => {
   const user = props.username;
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      localStorage.setItem('token', token);
-    } else {
-      localStorage.removeItem('token');
-    }
-  }, []);
+    async function fetchMyRoutines() {
+      try {
+        const response = await fetch(
+          `http://fitnesstrac-kr.herokuapp.com/api/users/${user}/routines`,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
-  useEffect(() => {
-    fetch(`http://fitnesstrac-kr.herokuapp.com/api/users/${user}/routines`, {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then((response) => response.json())
-      .then((result) => {
+        const result = await response.json();
         setMyRoutines(result);
         console.log(result);
-      })
-      .catch(console.error);
-  }, [token, user]);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchMyRoutines();
+  }, [user, token]);
 
   return (
     <div className='user-page'>
       <h2>Your Routines</h2>
-      <ul className='user-routines-list'>
+      {/* <ul className='user-routines-list'>
         {myRoutines.map((routine) => {
           return (
             <li className='routine' key={routine.id}>
@@ -53,7 +52,7 @@ const MyRoutines = (props) => {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
     </div>
   );
 };

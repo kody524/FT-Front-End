@@ -11,7 +11,7 @@ import AddRoutine from './components/AddRoutine.jsx';
 
 function App() {
   const [username, setUsername] = useState('');
-  
+
   return (
     <div className='App'>
       <Navibar />
@@ -19,9 +19,9 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='routines' element={<Routines />} />
         <Route path='activities' element={<Activities />} />
-        <Route path='signup' element={<Signup />} />
-        <Route path='login' element={<Login />} />
-        <Route path='users/me' element={<MyRoutines username={username} />} />
+        <Route path='signup' element={<Signup username={username} />} />
+        <Route path='login' element={<Login username={username} />} />
+        <Route path='myroutines' element={<MyRoutines username={username} />} />
         <Route path='addroutine' element={<AddRoutine />} />
       </Routes>
     </div>
